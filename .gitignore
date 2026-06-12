@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+
+# Dependencies (if you use npm for build tools)
+node_modules/
+vendor/
+
+# Build output
+dist/
+*.min.css
+*.min.js
+
+# Env / config
+.env
