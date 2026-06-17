@@ -22,6 +22,8 @@
 		<?php
 	endif;
 	?>
+
+	<?php get_template_part( 'template-parts/contact-section' ); ?>
 </main>
 
 <?php get_footer(); ?>
