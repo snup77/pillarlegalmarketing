@@ -30,3 +30,5 @@ function pillarlegalmarketing_nav_link_class( $atts, $item, $args ) {
 	return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'pillarlegalmarketing_nav_link_class', 10, 3 );
+
+add_filter( 'use_block_editor_for_post_type', '__return_false' );
