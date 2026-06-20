@@ -3,7 +3,7 @@
     <!-- =====================================================
          HERO
     ====================================================== -->
-    <section class="hero" aria-labelledby="hero-heading">
+    <section class="hero" aria-labelledby="hero-heading" style="background-image: url('<?php echo esc_url( site_url( '/wp-content/uploads/2026/06/homepage-hero2.jpg' ) ); ?>')">
       <div class="hero__inner">
         <h1 class="hero__heading" id="hero-heading">The AI-Native Legal Marketing Agency</h1>
         <p class="hero__subtext">AI search is changing how clients find lawyers. We build the digital infrastructure that makes your firm visible, readable, and reachable.</p>
@@ -201,6 +201,5 @@
     </section>
 
     	<?php get_template_part( 'template-parts/contact-section' ); ?>
-</main>
 
 <?php get_footer(); ?>
