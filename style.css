@@ -778,10 +778,123 @@ p:last-child { margin-bottom: 0; }
 .gform-theme--foundation .gform_fields {
   grid-row-gap: 1rem !important;
 }
+
+/* --- Contact Page Gravity Form (light / white bg) ------------ */
+.contact-page-form .gform_wrapper {
+  margin: 0;
+}
+
+.contact-page-form .gfield_label {
+  display: block;
+  color: var(--text-heading);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.contact-page-form .gfield_required {
+  display: none;
+}
+
+.contact-page-form .ginput_complex label,
+.contact-page-form .charleft,
+.contact-page-form .gf-char-count {
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+
+.contact-page-form .gfield {
+  margin-bottom: 12px;
+}
+
+.contact-page-form .ginput_container input,
+.contact-page-form .ginput_container textarea,
+.contact-page-form .ginput_container select {
+  width: 100%;
+  background: transparent;
+  color: #3a3a3a;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  border-radius: 0;
+  padding: 16px;
+  font-family: var(--font-nav);
+  font-size: 14px;
+  outline: none;
+  box-shadow: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.contact-page-form .ginput_container input::placeholder,
+.contact-page-form .ginput_container textarea::placeholder {
+  color: #3a3a3a;
+}
+
+.contact-page-form .ginput_container input:focus,
+.contact-page-form .ginput_container textarea:focus {
+  background: rgba(0, 0, 0, 0.02);
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.contact-page-form .ginput_container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-page-form .gform_footer,
+.contact-page-form .gform_page_footer {
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.contact-page-form .gform_button,
+.contact-page-form input[type="submit"] {
+  background: var(--purple) !important;
+  color: var(--white);
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.contact-page-form .gform_button:hover,
+.contact-page-form input[type="submit"]:hover {
+  opacity: 0.88;
+}
+
+.contact-page-form .gfield_error .ginput_container input,
+.contact-page-form .gfield_error .ginput_container textarea {
+  border: 1px solid #e74c3c;
+}
+
+.contact-page-form .gfield_validation_message,
+.contact-page-form .validation_message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.contact-page-form .gform_validation_errors {
+  background: transparent;
+  border: 1px solid #e74c3c;
+  color: var(--text-heading);
+  font-size: 14px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+}
  
 /* --- Legal Content (Privacy Policy, etc.) -------------------- */
 .legal-content {
   max-width: 860px;
+  margin: 0 auto;
 }
  
 .legal-content__updated {
@@ -1136,4 +1249,59 @@ p:last-child { margin-bottom: 0; }
  
   .site-footer__logo { margin: 0 auto; }
   .site-footer__social { justify-content: center; }
+}
+
+/* --- Confirmation Page --------------------------------------- */
+.confirmation-section {
+  padding: 120px 0;
+}
+
+.confirmation-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.confirmation-icon {
+  margin-bottom: 24px;
+}
+
+.confirmation-icon svg {
+  width: 46px;
+  height: 46px;
+  fill: #000000;
+}
+
+.confirmation-heading {
+  font-family: var(--font-serif);
+  font-size: 46px;
+  line-height: 1.2em;
+  color: var(--text-heading);
+  margin-bottom: 24px;
+}
+
+.confirmation-text {
+  font-family: var(--font-nav);
+  font-size: 20px;
+  color: var(--text-body);
+  margin-bottom: 32px;
+}
+
+.confirmation-btn {
+  display: inline-block;
+  background: var(--purple);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 12px 24px;
+  border: none;
+  text-decoration: none;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.confirmation-btn:hover {
+  opacity: 0.88;
 }

@@ -19,9 +19,9 @@
 
       <div class="site-footer__center">
         <p class="site-footer__copy">
-          Copyright &copy; 2026 <a href="home.html">Pillar Legal Marketing</a>
+          Copyright &copy; 2026 <a href="/">Pillar Legal Marketing</a>
         </p>
-        <a href="privacy.html" class="site-footer__privacy">Privacy Policy</a>
+        <a href="/privacy-policy/" class="site-footer__privacy">Privacy Policy</a>
       </div>
 
       <ul class="site-footer__social" aria-label="Social media links">
