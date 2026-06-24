@@ -8,8 +8,8 @@
         <h1 class="hero__heading" id="hero-heading">The AI-Native Legal Marketing Agency</h1>
         <p class="hero__subtext">AI search is changing how clients find lawyers. We build the digital infrastructure that makes your firm visible, readable, and reachable.</p>
         <div class="hero__ctas">
-          <a href="contact.html" class="btn btn--primary">Get in Touch</a>
-          <a href="services.html" class="btn btn--ghost">Explore our services &raquo;</a>
+          <a href="contact/" class="btn btn--primary">Get in Touch</a>
+          <a href="services/" class="btn btn--ghost">Explore our services &raquo;</a>
         </div>
       </div>
     </section>
@@ -42,28 +42,28 @@
             <span class="service-badge">Infrastructure</span>
             <h3 class="service-card__heading">AI-Ready Website Design</h3>
             <p class="service-card__body">We design and build law firm websites with the structured data, semantic markup, and technical architecture that AI and traditional search engines require. Your site won't just look professional — it will be built to be found, read, and interacted with by the next generation of search.</p>
-            <a href="services.html" class="text-link">Learn More &raquo;</a>
+            <a href="services/" class="text-link">Learn More &raquo;</a>
           </div>
 
           <div class="service-card">
             <span class="service-badge">Search Visibility</span>
             <h3 class="service-card__heading">Monthly AI-Native SEO</h3>
             <p class="service-card__body">Search is evolving faster than any agency's old playbook can keep up with, so we don't use one. We maintain your firm's SEO and AI readiness every month as Google and AI search platforms continue to change.</p>
-            <a href="services.html" class="text-link">Learn More &raquo;</a>
+            <a href="services/" class="text-link">Learn More &raquo;</a>
           </div>
 
           <div class="service-card">
             <span class="service-badge">Content</span>
             <h3 class="service-card__heading">Legal Content Writing</h3>
             <p class="service-card__body">We write practice area pages, attorney bios, blog posts, and location pages structured for both human readers, as well as traditional and AI search. Content that earns authority, answers the right questions, and converts visitors into consultations.</p>
-            <a href="services.html" class="text-link">Learn More &raquo;</a>
+            <a href="services/" class="text-link">Learn More &raquo;</a>
           </div>
 
           <div class="service-card">
             <span class="service-badge">Paid Search</span>
             <h3 class="service-card__heading">Google Ads Management</h3>
             <p class="service-card__body">We manage Google Ads campaigns built specifically for law firms, targeted, conversion-focused, and integrated with landing pages designed to turn clicks into consultations. No wasted spend, no generic ad copy.</p>
-            <a href="services.html" class="text-link">Learn More &raquo;</a>
+            <a href="services/" class="text-link">Learn More &raquo;</a>
           </div>
 
         </div>
@@ -80,7 +80,7 @@
             <p class="overline">Our Work</p>
             <h2 id="work-heading">Built for Search. Built for Clients.</h2>
             <p class="section__body">We designed a solo attorney's website with a clean, professional brand identity and built it on an AI-ready foundation, structured data, optimized content architecture, and a blog strategy targeting the search terms her prospective clients are actually using.</p>
-            <a href="our-work.html" class="btn btn--primary">Explore Our Work</a>
+            <a href="our-work/" class="btn btn--primary">Explore Our Work</a>
           </div>
           <div class="our-work__images">
             <img
@@ -110,8 +110,8 @@
           <div class="about__content">
             <p class="overline">About</p>
             <h2 id="about-heading">Legal AI Marketing Expert</h2>
-            <p>Pillar Legal Marketing was founded by Anup Sheth with a single focus: helping solo attorneys and small law firms build a digital presence that performs in the age of AI search.</p>
-            <p>Before founding Pillar, Anup spent years as a paralegal at two prominent New York law firms, giving him a firsthand understanding of how law firms operate that most marketing agencies simply don't have. That legal background informs everything we build, from AI-ready website architecture to content strategy designed for how Google and AI search platforms surface legal information today.</p>
+            <p class="section__body">Pillar Legal Marketing was founded by Anup Sheth with a single focus: helping solo attorneys and small law firms build a digital presence that performs in the age of AI search.</p>
+            <p class="section__body">Before founding Pillar, Anup spent years as a paralegal at two prominent New York law firms, giving him a firsthand understanding of how law firms operate that most marketing agencies simply don't have. That legal background informs everything we build, from AI-ready website architecture to content strategy designed for how Google and AI search platforms surface legal information today.</p>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@
     <!-- =====================================================
          BLOG
     ====================================================== -->
-    <section class="section section--white" id="blog" aria-labelledby="blog-heading">
+    <section class="section section--alt" id="blog" aria-labelledby="blog-heading">
       <div class="container">
         <div class="blog-intro">
           <p class="overline">Blog</p>
@@ -144,58 +144,48 @@
 
         <div class="blog-grid">
 
-          <article class="blog-card">
-            <a href="ai-visibility-nj-divorce-lawyers-monmouth-middlesex.html" class="blog-card__img-link">
-              <img
-                src="https://www.pillarlegalmarketing.com/wp-content/uploads/2026/04/PLM-homepage-hero-400x250.jpg"
-                alt="AI Visibility for NJ Divorce Lawyers: Findings from Monmouth & Middlesex Counties"
-                class="blog-card__img"
-                loading="lazy"
-              >
-            </a>
-            <h3 class="blog-card__heading">
-              <a href="ai-visibility-nj-divorce-lawyers-monmouth-middlesex.html">AI Visibility for NJ Divorce Lawyers: Findings from Monmouth &amp; Middlesex Counties</a>
-            </h3>
-            <time class="blog-card__date" datetime="2026-06-10">Jun 10, 2026</time>
-            <p class="blog-card__excerpt">We analyzed divorce lawyer visibility across ChatGPT, Google AI Mode, and Perplexity in Monmouth and Middlesex Counties. Here are four key factors that appear to influence AI visibility.</p>
-          </article>
+          <?php
+          $recent_posts = new WP_Query( [
+            'post_type'      => 'post',
+            'posts_per_page' => 3,
+            'post_status'    => 'publish',
+            'orderby'        => 'date',
+            'order'          => 'DESC',
+          ] );
+
+          if ( $recent_posts->have_posts() ) :
+            while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
+          ?>
 
           <article class="blog-card">
-            <a href="law-firm-website-platforms.html" class="blog-card__img-link">
-              <img
-                src="https://www.pillarlegalmarketing.com/wp-content/uploads/2025/03/best-legal-website-platforms-400x250.jpg"
-                alt="Best Website Platforms for Law Firms"
-                class="blog-card__img"
-                loading="lazy"
-              >
+            <?php if ( has_post_thumbnail() ) : ?>
+            <a href="<?php the_permalink(); ?>" class="blog-card__img-link">
+              <?php the_post_thumbnail( 'medium', [
+                'class'   => 'blog-card__img',
+                'loading' => 'lazy',
+                'alt'     => esc_attr( get_the_title() ),
+              ] ); ?>
             </a>
+            <?php endif; ?>
             <h3 class="blog-card__heading">
-              <a href="law-firm-website-platforms.html">Best Website Platforms for Law Firms</a>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
-            <time class="blog-card__date" datetime="2025-03-31">Mar 31, 2025</time>
-            <p class="blog-card__excerpt">We walk you through the different types of website platforms that law firms can use to build their websites. Some platforms are designed for speed and simplicity. Others offer more control, but require more time and technical know-how.</p>
+            <time class="blog-card__date" datetime="<?php echo esc_attr( get_the_date( 'Y-m-d' ) ); ?>">
+              <?php echo esc_html( get_the_date() ); ?>
+            </time>
+            <p class="blog-card__excerpt"><?php the_excerpt(); ?></p>
           </article>
 
-          <article class="blog-card">
-            <a href="legal-website-design-best-practices.html" class="blog-card__img-link">
-              <img
-                src="https://www.pillarlegalmarketing.com/wp-content/uploads/2025/03/legal-web-design-hero-400x250.jpg"
-                alt="7 Elements Of Great Legal Website Design"
-                class="blog-card__img"
-                loading="lazy"
-              >
-            </a>
-            <h3 class="blog-card__heading">
-              <a href="legal-website-design-best-practices.html">7 Elements Of Great Legal Website Design</a>
-            </h3>
-            <time class="blog-card__date" datetime="2025-03-24">Mar 24, 2025</time>
-            <p class="blog-card__excerpt">Whether you're looking to improve your existing site or planning a complete redesign, these best practices will help you create a website that looks professional and drives client acquisition.</p>
-          </article>
+          <?php
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
 
         </div>
 
         <div class="blog-cta">
-          <a href="blog.html" class="btn btn--primary">View More</a>
+          <a href="blog/" class="btn btn--primary">View More</a>
         </div>
       </div>
     </section>

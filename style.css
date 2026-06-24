@@ -50,7 +50,7 @@ html {
  
 body {
   font-family: var(--font-sans);
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.7;
   color: var(--text-body);
   background: var(--white);
@@ -120,6 +120,7 @@ p:last-child { margin-bottom: 0; }
  
 /* Centered section text */
 .section--center .section__heading,
+.section--center h2,
 .section--center .overline,
 .section--center .section__body {
   text-align: center;
@@ -128,7 +129,7 @@ p:last-child { margin-bottom: 0; }
 .section__body {
   max-width: 720px;
   margin-top: 24px;
-  font-size: 15px;
+  font-size: 20px;
 }
  
 .section--center .section__body {
@@ -138,8 +139,8 @@ p:last-child { margin-bottom: 0; }
  
 /* --- Overline Labels ---------------------------------------- */
 .overline {
-  font-family: var(--font-sans);
-  font-size: 14px;
+  font-family: var(--font-sans) !important;
+  font-size: 14px !important;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -310,7 +311,6 @@ p:last-child { margin-bottom: 0; }
   text-align: center;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   padding: 200px 24px;
 }
  
@@ -319,7 +319,7 @@ p:last-child { margin-bottom: 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.68);
 }
  
 .hero__inner {
@@ -399,9 +399,13 @@ p:last-child { margin-bottom: 0; }
 }
  
 .service-card__body {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--text-body);
   line-height: 1.75;
+}
+
+.service-card .text-link {
+  font-size: 18px;
 }
  
 /* --- Our Work ----------------------------------------------- */
@@ -447,10 +451,12 @@ p:last-child { margin-bottom: 0; }
 }
  
 .about__content p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.75;
   margin-bottom: 16px;
 }
+
+
  
 /* --- Testimonial Section ------------------------------------ */
 .testimonial-layout {
@@ -536,9 +542,11 @@ p:last-child { margin-bottom: 0; }
 }
  
 .blog-card__heading {
+  font-family: var(--font-sans);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.35;
+  color: var(--text-heading);
   margin-bottom: 8px;
 }
  
@@ -553,15 +561,23 @@ p:last-child { margin-bottom: 0; }
  
 .blog-card__date {
   display: block;
+  font-family: var(--font-sans);
   font-size: 13px;
-  color: var(--text-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.9;
+  color: var(--purple);
   margin-bottom: 10px;
 }
  
 .blog-card__excerpt {
-  font-size: 14px;
   line-height: 1.7;
   color: var(--text-body);
+}
+
+.blog-card__excerpt p {
+  font-size: 16px !important;
 }
  
 .blog-cta {
@@ -938,7 +954,7 @@ p:last-child { margin-bottom: 0; }
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 10, 20, 0.55);
+  background: rgba(0, 0, 0, 0.68);
 }
  
 .post-hero__heading {
@@ -1138,13 +1154,17 @@ p:last-child { margin-bottom: 0; }
 .service-row__content .overline {
   margin-bottom: 16px;
 }
+
+#story .service-row__content {
+  align-self: start;
+}
  
 .service-row__content h2 {
   margin-bottom: 20px;
 }
  
 .service-row__content p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.75;
 }
  
@@ -1219,7 +1239,7 @@ p:last-child { margin-bottom: 0; }
     gap: 24px;
   }
  
-  .hero { padding: 120px 24px; background-attachment: scroll; }
+  .hero { padding: 120px 24px; }
   .hero__heading { font-size: 36px; }
  
   .page-hero__heading { font-size: 48px; }
