@@ -169,6 +169,7 @@ p:last-child { margin-bottom: 0; }
  
 .btn--primary:hover {
   opacity: 0.88;
+  color: var(--white);
 }
  
 .btn--ghost {
@@ -325,7 +326,7 @@ p:last-child { margin-bottom: 0; }
 .hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 860px;
+  max-width: 850px;
 }
  
 .hero__heading {
@@ -337,9 +338,9 @@ p:last-child { margin-bottom: 0; }
 }
  
 .hero__subtext {
-  font-size: 18px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.9);
-  max-width: 580px;
+  max-width: 730px;
   margin: 0 auto 40px;
   line-height: 1.6;
 }
@@ -869,21 +870,21 @@ p:last-child { margin-bottom: 0; }
 .contact-page-form .gform_button,
 .contact-page-form input[type="submit"] {
   background: var(--purple) !important;
-  color: var(--white);
-  border: none;
-  font-family: var(--font-sans);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
-  border-radius: 5px;
-  padding: 0.3em 1em;
+  color: var(--white) !important;
+  border: none !important;
+  font-family: var(--font-sans) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px !important;
+  border-radius: 5px !important;
+  padding: 12px 24px !important;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
 
 .contact-page-form .gform_button:hover,
 .contact-page-form input[type="submit"]:hover {
-  opacity: 0.88;
+  opacity: 0.88 !important;
 }
 
 .contact-page-form .gfield_error .ginput_container input,
@@ -1182,19 +1183,24 @@ p:last-child { margin-bottom: 0; }
 .service-fullbleed__content {
   max-width: 540px;  /* text lives on the left half */
 }
- 
+
 .service-fullbleed .overline {
   color: rgba(255, 255, 255, 0.7);
 }
- 
+
 .service-fullbleed h2 {
   color: var(--white);
   margin-bottom: 20px;
 }
- 
+
 .service-fullbleed p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 15px;
+  line-height: 1.75;
+}
+
+p.service-fullbleed__copy {
+  font-size: 18px;
   line-height: 1.75;
 }
  
@@ -1324,4 +1330,5 @@ p:last-child { margin-bottom: 0; }
 
 .confirmation-btn:hover {
   opacity: 0.88;
+  color: var(--white);
 }

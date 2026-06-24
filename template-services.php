@@ -74,7 +74,7 @@ Description: A custom template for displaying the services page.
         <div class="service-fullbleed__content">
           <p class="overline">Legal Content Writing</p>
           <h2 id="content-writing-heading">Content Built to Earn Authority</h2>
-          <p>We write practice area pages, attorney bios, blog posts, and location pages structured for both human readers and AI search platforms. Every piece of content is built to earn authority, answer the questions your prospective clients are actually asking, and convert visitors into consultations.</p>
+          <p class="service-fullbleed__copy">We write practice area pages, attorney bios, blog posts, and location pages structured for both human readers and AI search platforms. Every piece of content is built to earn authority, answer the questions your prospective clients are actually asking, and convert visitors into consultations.</p>
         </div>
       </div>
     </section>
@@ -136,7 +136,7 @@ Description: A custom template for displaying the services page.
         <div class="service-fullbleed__content">
           <p class="overline">Support &amp; Services</p>
           <h2 id="support-heading">Ongoing Support &amp; Strategy</h2>
-          <p>As AI search continues to evolve, your digital presence needs to evolve with it. We provide ongoing technical, design, and content support, keeping your site updated, your schema current, and your firm positioned for whatever changes in search come next.</p>
+          <p class="service-fullbleed__copy">As AI search continues to evolve, your digital presence needs to evolve with it. We provide ongoing technical, design, and content support, keeping your site updated, your schema current, and your firm positioned for whatever changes in search come next.</p>
         </div>
       </div>
     </section>
