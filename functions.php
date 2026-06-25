@@ -20,6 +20,7 @@ add_action( 'after_setup_theme', 'pillarlegalmarketing_setup' );
 
 function pillarlegalmarketing_enqueue_scripts() {
 	wp_enqueue_style( 'pillarlegalmarketing-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_script( 'pillarlegalmarketing-navigation', get_template_directory_uri() . '/js/navigation.js', array(), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'pillarlegalmarketing_enqueue_scripts' );
 

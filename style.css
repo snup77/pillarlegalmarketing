@@ -4,7 +4,7 @@ Theme URI:
 Author:
 Author URI:
 Description:
-Version: 1.0.1
+Version: 1.0.2
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
@@ -279,7 +279,7 @@ p:last-child { margin-bottom: 0; }
 .site-nav__close {
   display: none;
   position: absolute;
-  top: 14px;
+  top: calc(var(--header-height) / 2 - 16px);
   right: 20px;
   width: 32px;
   height: 32px;
@@ -1255,7 +1255,17 @@ p.service-fullbleed__copy {
   .site-nav.is-open .site-nav__close {
     display: flex;
   }
- 
+
+  .site-header__menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .site-header__menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .site-header__menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
   .site-nav.is-open .site-nav__list {
     flex-direction: column;
     align-items: flex-start;

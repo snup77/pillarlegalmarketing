@@ -37,7 +37,6 @@
         <button
           class="site-nav__close"
           aria-label="<?php esc_attr_e( 'Close navigation', 'pillarlegalmarketing' ); ?>"
-          onclick="document.getElementById('site-nav').classList.remove('is-open'); document.querySelector('.site-header__menu-toggle').setAttribute('aria-expanded','false');"
         >
           <span></span>
           <span></span>
@@ -57,7 +56,6 @@
         aria-label="<?php esc_attr_e( 'Toggle navigation', 'pillarlegalmarketing' ); ?>"
         aria-expanded="false"
         aria-controls="site-nav"
-        onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'); document.getElementById('site-nav').classList.toggle('is-open');"
       >
         <span></span>
         <span></span>
