@@ -4,7 +4,7 @@ Theme URI:
 Author:
 Author URI:
 Description:
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 8.0
@@ -965,7 +965,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--white);
   max-width: 860px;
   margin: 0 auto;
-  line-height: 1.25;
+  line-height: 1.2;
 }
  
 .post-byline {
@@ -984,7 +984,6 @@ p:last-child { margin-bottom: 0; }
 }
  
 .post-byline__name {
-  font-family: var(--font-serif);
   font-size: 18px;
   color: var(--text-heading);
   margin-bottom: 2px;
@@ -1004,8 +1003,10 @@ p:last-child { margin-bottom: 0; }
   font-family: var(--font-serif);
   font-weight: 700;
   font-size: 30px;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
   color: #474747;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 16px;
 }
  
@@ -1014,31 +1015,47 @@ p:last-child { margin-bottom: 0; }
   font-weight: 600;
   font-size: 22px;
   color: #474747;
-  margin-top: 32px;
-  margin-bottom: 14px;
+  margin-top: 20px;
+  margin-bottom: 16px;
 }
  
 .post-content p {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
   color: var(--text-body);
   margin-bottom: 18px;
 }
  
 .post-content ul {
+  font-size: 20px;
+  line-height: 1.8;
   list-style: disc;
   padding-left: 24px;
   margin-bottom: 18px;
 }
  
 .post-content li {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.015em;
   color: var(--text-body);
   margin-bottom: 8px;
 }
  
+.post-content ol {
+  font-size: 20px;
+  line-height: 1.8;
+  list-style: decimal;
+  padding-left: 24px;
+  margin-bottom: 18px;
+}
+
 .post-content h2:first-child { margin-top: 0; }
+
+.post-content img {
+  margin: 0 auto 18px;
+}
  
 /* --- Footer ------------------------------------------------ */
 .site-footer {
@@ -1251,8 +1268,10 @@ p.service-fullbleed__copy {
   .page-hero__heading { font-size: 48px; }
   .post-hero { padding: 100px 24px; }
   .post-hero__heading { font-size: 32px; }
-  .post-content h2 { font-size: 26px; }
+  .post-content h2 { font-size: 26px; letter-spacing: -0.015em; }
   .post-content h3 { font-size: 20px; }
+  .post-content p { font-size: 16px; letter-spacing: 0.02em; }
+  .post-content li { font-size: 16px; letter-spacing: 0.02em; }
   .service-row { grid-template-columns: 1fr; gap: 40px; }
   .service-row--img-left .service-row__content { order: 1; }
   .service-row--img-left .service-row__image { order: 2; }
