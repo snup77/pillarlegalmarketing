@@ -1053,6 +1053,16 @@ p:last-child { margin-bottom: 0; }
 
 .post-content h2:first-child { margin-top: 0; }
 
+.post-content a {
+  color: var(--dark);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.post-content a:hover {
+  text-decoration: none;
+}
+
 .post-content img {
   margin: 0 auto 18px;
 }
