@@ -450,6 +450,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
 ===================================================== */
 .contact-form{flex:1.5 1 460px;min-width:0;background:#FFFFFF;border:1px solid #E3E0E6;border-radius:8px;padding:clamp(24px,3vw,40px);box-sizing:border-box}
 .contact-form .gform_wrapper.gravity-theme{margin:0}
+.contact-form--page{flex:1.4 1 480px}
 .contact-form .gform_wrapper.gravity-theme .gform_fields{grid-column-gap:20px;grid-row-gap:24px}
 
 /* Labels */
