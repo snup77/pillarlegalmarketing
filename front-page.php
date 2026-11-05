@@ -15,7 +15,7 @@ $img = content_url( '/uploads/2026/11/' );
         <h1 class="u19">Your Firm. Your Goals. Your Marketing Partner.</h1>
         <p class="u20">Website design, SEO, and digital marketing for law firms, backed by experienced guidance, direct collaboration, and personal attention you won't find at every agency.</p>
         <div class="u21">
-          <a class="btn btn-primary u22" href="#contact">Get in Touch</a>
+          <a class="btn btn-primary u22" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Get in Touch</a>
           <a class="btn btn-secondary u23" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Explore Our Services</a>
         </div>
         <div class="u24">
@@ -217,7 +217,7 @@ $img = content_url( '/uploads/2026/11/' );
           <p class="u33">From website optimization and SEO to content development, local search visibility, and marketing ROI analysis, we work with you to attract more prospective clients and make smarter marketing investments.</p>
         </div>
       </div>
-      <a class="btn btn-primary u90" href="#contact">Let's Discuss Your Firm</a>
+      <a class="btn btn-primary u90" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Let's Discuss Your Firm</a>
     </div>
   </section>
 
