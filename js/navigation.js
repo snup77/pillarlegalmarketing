@@ -1,29 +1,52 @@
-document.addEventListener( 'DOMContentLoaded', function () {
-	var toggle = document.querySelector( '.site-header__menu-toggle' );
-	var nav    = document.getElementById( 'site-nav' );
-	var close  = document.querySelector( '.site-nav__close' );
+/* Pillar Legal Marketing — mobile menu */
+(function () {
+  var openBtn = document.querySelector('[data-menu-open]');
+  var menu = document.getElementById('site-menu');
+  if (!openBtn || !menu) return;
 
-	if ( ! toggle || ! nav ) return;
+  function isOpen() {
+    return menu.classList.contains('is-open');
+  }
 
-	function openMenu() {
-		nav.classList.add( 'is-open' );
-		toggle.classList.add( 'is-active' );
-		toggle.setAttribute( 'aria-expanded', 'true' );
-		document.body.style.overflow = 'hidden';
-	}
+  function open() {
+    menu.classList.add('is-open');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    var closeBtn = menu.querySelector('.menu-panel [data-menu-close]');
+    if (closeBtn) closeBtn.focus();
+  }
 
-	function closeMenu() {
-		nav.classList.remove( 'is-open' );
-		toggle.classList.remove( 'is-active' );
-		toggle.setAttribute( 'aria-expanded', 'false' );
-		document.body.style.overflow = '';
-	}
+  function close() {
+    menu.classList.remove('is-open');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    openBtn.focus();
+  }
 
-	toggle.addEventListener( 'click', function () {
-		nav.classList.contains( 'is-open' ) ? closeMenu() : openMenu();
-	} );
+  openBtn.addEventListener('click', open);
+  menu.querySelectorAll('[data-menu-close]').forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (!isOpen()) return; // desktop: links behave normally
+      if (el.tagName === 'A') {
+        menu.classList.remove('is-open');
+        openBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      } else {
+        close();
+      }
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen()) close();
+  });
 
-	if ( close ) {
-		close.addEventListener( 'click', closeMenu );
-	}
-} );
+  // If the window is resized past the mobile breakpoint while open, reset state
+  var desktop = window.matchMedia('(min-width: 861px)');
+  desktop.addEventListener('change', function (e) {
+    if (e.matches && isOpen()) {
+      menu.classList.remove('is-open');
+      openBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();

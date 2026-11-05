@@ -1,49 +1,68 @@
   </main>
-  
-  <footer class="site-footer" aria-label="Site footer">
-    <div class="site-footer__inner">
 
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-footer__logo" aria-label="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> — Home">
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+  <footer class="u123">
+    <div class="footer-inner u124">
+
+      <a class="u125" href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <?php
-        $footer_logo = get_field( 'footer_logo', 'option' );
+        $footer_logo = function_exists( 'get_field' ) ? get_field( 'footer_logo', 'option' ) : null;
         if ( $footer_logo ) : ?>
           <img
+            class="u126"
             src="<?php echo esc_url( $footer_logo['url'] ); ?>"
-            alt="<?php echo esc_attr( $footer_logo['alt'] ?: get_bloginfo( 'name' ) ); ?>"
-            width="<?php echo esc_attr( $footer_logo['width'] ); ?>"
-            height="<?php echo esc_attr( $footer_logo['height'] ); ?>"
+            alt="<?php echo esc_attr( $footer_logo['alt'] ?: get_bloginfo( 'name' ) . ' — home' ); ?>"
+            width="147"
+            height="44"
             loading="lazy"
           >
+        <?php else : ?>
+          <span><?php bloginfo( 'name' ); ?></span>
         <?php endif; ?>
       </a>
 
-      <div class="site-footer__center">
-        <p class="site-footer__copy">
-          Copyright &copy; 2026 <a href="/">Pillar Legal Marketing</a>
-        </p>
-        <a href="privacy/" class="site-footer__privacy">Privacy Policy</a>
+      <div class="u127">
+        <span>Copyright &copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?></span>
+        <?php $privacy_url = get_privacy_policy_url() ?: home_url( '/privacy/' ); ?>
+        <a class="footer-link u128" href="<?php echo esc_url( $privacy_url ); ?>"><?php esc_html_e( 'Privacy Policy', 'pillarlegalmarketing' ); ?></a>
       </div>
 
-      <ul class="site-footer__social" aria-label="Social media links">
-        <li>
-          <a href="https://www.facebook.com/people/Sheth-Agency/61560654701640/" aria-label="Follow on Facebook" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.tiktok.com/@anupsheth?lang=en" aria-label="Follow on TikTok" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/pillarlegalmarketing/" aria-label="Follow on Instagram" target="_blank" rel="noopener noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-        </li>
-      </ul>
+      <nav class="footer-social u129" aria-label="<?php esc_attr_e( 'Social media', 'pillarlegalmarketing' ); ?>">
+        <a
+          class="social-btn u130"
+          href="https://www.facebook.com/people/Sheth-Agency/61560654701640/"
+          aria-label="Pillar Legal Marketing on Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"></path></svg>
+        </a>
+        <a
+          class="social-btn u130"
+          href="https://www.tiktok.com/@anupsheth?lang=en"
+          aria-label="Pillar Legal Marketing on TikTok"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg>
+        </a>
+        <a
+          class="social-btn u130"
+          href="https://www.instagram.com/pillarlegalmarketing/"
+          aria-label="Pillar Legal Marketing on Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.6" cy="6.4" r="1.1" fill="#FFFFFF" stroke="none"></circle></svg>
+        </a>
+      </nav>
 
     </div>
   </footer>
+
+</div><!-- .u1 -->
 
 <?php wp_footer(); ?>
 </body>
